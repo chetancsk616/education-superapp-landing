@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 :root {
@@ -21,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -284,11 +286,35 @@ body {
     font-size: 1rem;
 }
 
-/* Hero Footer Stats */
-.hero-footer {
-    text-align: center;
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+input, textarea, button {
+    font-family: inherit;
+    font-size: 1rem;
+    outline: 2px solid transparent;
+    transition: outline 0.2s;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.error-message {
+    display: block;
+    min-height: 1.2em;
+}
+
+#form-status {
+    min-height: 1.2em;
+}
+/* Hero Footer Stats */
 .stats {
     display: flex;
     justify-content: center;

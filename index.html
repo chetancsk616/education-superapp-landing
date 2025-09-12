@@ -14,14 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav id="main-navbar" style="position:fixed;top:-80px;left:0;width:100%;background:var(--bg-secondary);z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;">
-        <span style="font-weight:700;font-size:1.3rem;color:#fff;letter-spacing:1px;">Voice of the College</span>
-        <div>
-            <a href="#features" style="color:#fff;margin-right:2rem;text-decoration:none;font-weight:500;">Features</a>
-            <a href="#join" style="color:#fff;text-decoration:none;font-weight:500;">Join</a>
-        </div>
-    </nav>
+    <header>
+      <nav id="main-navbar" style="position:fixed;top:-80px;left:0;width:100%;background:var(--bg-secondary);z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-weight:700;font-size:1.3rem;color:#fff;letter-spacing:1px;">Voice of the College</span>
+          <div>
+              <a href="#features" style="color:#fff;margin-right:2rem;text-decoration:none;font-weight:500;">Features</a>
+              <a href="#join" style="color:#fff;text-decoration:none;font-weight:500;">Join</a>
+              <a href="#contact" style="color:#fff;margin-left:2rem;text-decoration:none;font-weight:500;">Contact</a>
+          </div>
+      </nav>
+    </header>
     <main class="hero-section">
         <div class="stars-background"></div>
     <div class="container" style="padding-top:100px;">
@@ -71,7 +73,7 @@
                         Bridging the gap between 1,000+ universities and millions of aspiring students
                     </p>
                 </div>
-            </section>
+                </section>
             
             <!-- Section 3: Stats -->
             <footer class="hero-footer fade-section" id="stats">
@@ -89,8 +91,37 @@
                         <span class="stat-label">Market Size</span>
                     </div>
                 </div>
+                <section id="contact" class="fade-section" style="max-width:500px;margin:3rem auto 2rem auto;padding:2rem;background:rgba(255,255,255,0.04);border-radius:16px;">
+                    <h2 style="text-align:center;font-size:2rem;margin-bottom:1.2rem;">Contact Us</h2>
+                    <form id="contactForm" aria-labelledby="contact-heading" novalidate>
+                        <div style="margin-bottom:1rem;">
+                            <label for="name" style="display:block;font-weight:600;margin-bottom:0.3rem;">Name</label>
+                            <input type="text" id="name" name="name" required aria-required="true" aria-label="Your Name" style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;">
+                            <span class="error-message" id="name-error" aria-live="polite" style="color:#f5576c;font-size:0.95rem;"></span>
+                        </div>
+                        <div style="margin-bottom:1rem;">
+                            <label for="email" style="display:block;font-weight:600;margin-bottom:0.3rem;">Email</label>
+                            <input type="email" id="email" name="email" required aria-required="true" aria-label="Your Email" style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;">
+                            <span class="error-message" id="email-error" aria-live="polite" style="color:#f5576c;font-size:0.95rem;"></span>
+                        </div>
+                        <div style="margin-bottom:1rem;">
+                            <label for="message" style="display:block;font-weight:600;margin-bottom:0.3rem;">Message</label>
+                            <textarea id="message" name="message" required aria-required="true" aria-label="Your Message" rows="4" style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;"></textarea>
+                            <span class="error-message" id="message-error" aria-live="polite" style="color:#f5576c;font-size:0.95rem;"></span>
+                        </div>
+                        <button type="submit" class="cta-button" style="width:100%;">Send Message</button>
+                        <div id="form-status" aria-live="polite" style="margin-top:1rem;font-size:1rem;"></div>
+                    </form>
+                </section>
             </footer>
-        </div>
+                </div>
+                        <!-- ...existing code... -->
+                </main>
+                <!-- Contact Section at Bottom -->
+                <footer style="text-align:center;padding:1.5rem 0;color:#b3b3b3;font-size:1rem;background:var(--bg-secondary);margin-top:2rem;">
+                    <div>&copy; 2025 Voice of the College. All rights reserved.</div>
+                    <div>Made with ❤️ for Indian Higher Education.</div>
+                </footer>
         
         <div class="floating-elements">
             <div class="floating-element" style="--delay: 0s; --duration: 6s;"></div>
@@ -132,6 +163,67 @@ window.addEventListener('DOMContentLoaded', function() {
                 toggleActions: 'play none none none'
             },
             delay: i * 0.2
+        });
+    });
+
+    // Contact Form Validation & Submission
+    const form = document.getElementById('contactForm');
+    const statusDiv = document.getElementById('form-status');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let valid = true;
+        // Clear previous errors
+        ['name', 'email', 'message'].forEach(id => {
+            document.getElementById(id+'-error').textContent = '';
+        });
+        statusDiv.textContent = '';
+
+        // Validate Name
+        const name = form.name.value.trim();
+        if (!name) {
+            document.getElementById('name-error').textContent = 'Please enter your name.';
+            valid = false;
+        }
+
+        // Validate Email
+        const email = form.email.value.trim();
+        if (!email) {
+            document.getElementById('email-error').textContent = 'Please enter your email.';
+            valid = false;
+        } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+            document.getElementById('email-error').textContent = 'Please enter a valid email address.';
+            valid = false;
+        }
+
+        // Validate Message
+        const message = form.message.value.trim();
+        if (!message) {
+            document.getElementById('message-error').textContent = 'Please enter your message.';
+            valid = false;
+        }
+
+        if (!valid) {
+            statusDiv.textContent = '';
+            return;
+        }
+
+        // Mock submit to fake endpoint
+        statusDiv.textContent = 'Sending...';
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message })
+        })
+        .then(res => {
+            if (res.ok) {
+                statusDiv.textContent = 'Thank you! Your message has been sent.';
+                form.reset();
+            } else {
+                throw new Error('Network error');
+            }
+        })
+        .catch(() => {
+            statusDiv.textContent = 'Sorry, there was a problem sending your message. Please try again.';
         });
     });
 });
