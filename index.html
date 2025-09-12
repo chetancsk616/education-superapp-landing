@@ -26,16 +26,48 @@
     </header>
     <main class="hero-section">
         <div class="stars-background"></div>
-    <div class="container" style="padding-top:100px;">
-            <header class="hero-header">
-                <h1 class="hero-title glitch-text" data-text="Voice of the College">
-                    Voice of the College
-                </h1>
-                <p class="hero-subtitle fade-up">
-                    The revolutionary Platform empowering 40 million Indian students with AI-powered guidance, community connections, digital literacy tools and real-time shuttle tracking.
-                </p>
-            </header>
-            
+        <div class="container" style="padding-top:100px;">
+            <section class="hero-grid">
+                <div class="hero-copy">
+                    <header class="hero-header">
+                        <h1 class="hero-title glitch-text" data-text="Voice of the College">
+                            Voice of the College
+                        </h1>
+                        <p class="hero-subtitle fade-up">
+                            The revolutionary Platform empowering 40 million Indian students with AI-powered guidance, community connections, digital literacy tools and real-time shuttle tracking.
+                        </p>
+                    </header>
+                </div>
+                <div class="hero-illustration">
+                    <!-- Decorative SVG Illustration with animation -->
+                    <svg viewBox="0 0 220 220" width="100%" height="100%" aria-hidden="true" style="max-width:340px;display:block;margin:auto;">
+                        <defs>
+                            <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="var(--primary-color)" />
+                                <stop offset="100%" stop-color="var(--secondary-color)" />
+                            </radialGradient>
+                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="var(--accent-color)" />
+                                <stop offset="100%" stop-color="var(--primary-color)" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="110" cy="110" r="80" fill="url(#grad1)" opacity="0.8">
+                            <animate attributeName="r" values="80;90;80" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <ellipse cx="110" cy="110" rx="55" ry="80" fill="url(#grad2)" opacity="0.5">
+                            <animate attributeName="rx" values="55;65;55" dur="2.5s" repeatCount="indefinite" />
+                        </ellipse>
+                        <circle cx="110" cy="110" r="30" fill="var(--accent-color)" opacity="0.7">
+                            <animate attributeName="r" values="30;40;30" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                        <rect x="80" y="80" width="60" height="60" rx="18" fill="var(--text-light)" opacity="0.12">
+                            <animate attributeName="x" values="80;90;80" dur="2.2s" repeatCount="indefinite" />
+                        </rect>
+                    </svg>
+                </div>
+                
+            </section>
+            <!-- ...existing code... -->
             <!-- Section 1: Features -->
             <section class="hero-content fade-section" id="features">
                 <div class="features-grid">
@@ -44,26 +76,22 @@
                         <h3>AI Helper</h3>
                         <p>Personalized academic guidance and career counseling powered by advanced AI</p>
                     </div>
-                    
                     <div class="feature-card">
                         <div class="feature-icon"></div>
                         <h3>AI UI Designer</h3>
                         <p>Intuitive design tools that adapt to low digital literacy levels</p>
                     </div>
-                    
                     <div class="feature-card">
                         <div class="feature-icon"></div>
                         <h3>Community Hub</h3>
                         <p>Connect with peers, mentors, and university networks across India</p>
                     </div>
-
                     <div class="feature-card">
                         <div class="feature-icon"></div>
                         <h3>Shuttle Tracking</h3>
                         <p>Real-time tracking of university shuttles for safer commutes</p>
                     </div>
                 </div>
-                
                 <!-- Section 2: CTA -->
                 <div class="cta-section fade-section" id="join">
                     <button class="cta-button pulse">
@@ -73,8 +101,7 @@
                         Bridging the gap between 1,000+ universities and millions of aspiring students
                     </p>
                 </div>
-                </section>
-            
+            </section>
             <!-- Section 3: Stats -->
             <footer class="hero-footer fade-section" id="stats">
                 <div class="stats">
@@ -114,9 +141,9 @@
                     </form>
                 </section>
             </footer>
-                </div>
-                        <!-- ...existing code... -->
-                </main>
+        </div>
+        <!-- ...existing code... -->
+    </main>
                 <!-- Contact Section at Bottom -->
                 <footer style="text-align:center;padding:1.5rem 0;color:#b3b3b3;font-size:1rem;background:var(--bg-secondary);margin-top:2rem;">
                     <div>&copy; 2025 Voice of the College. All rights reserved.</div>
