@@ -32,7 +32,22 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
+main-navbar {
+    background: var(--bg-secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+@media only screen and (max-width: 768px) {
+    .main-navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .main-navbar a {
+        margin: 0.5rem 0;
+    }
+}
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
