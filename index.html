@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Voice of the College - The revolutionary super-app transforming higher education in India">
+    <meta name="description"
+        content="Voice of the College - The revolutionary super-app transforming higher education in India">
     <title>Voice of the College | Revolutionizing Indian Higher Education</title>
     <link rel="stylesheet" href="styles.css">
     <!-- GSAP CDN -->
@@ -13,16 +15,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-      <nav class="main-navbar" id="main-navbar" style="position:fixed;top:-80px;left:0;width:100%;background:var(--bg-secondary);z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;">
-          <span style="font-weight:700;font-size:1.3rem;color:#fff;letter-spacing:1px;">Voice of the College</span>
-          <div>
-              <a href="#features" style="color:#fff;margin-right:2rem;text-decoration:none;font-weight:500;">Features</a>
-              <a href="#join" style="color:#fff;text-decoration:none;font-weight:500;">Join</a>
-              <a href="#contact" style="color:#fff;margin-left:2rem;text-decoration:none;font-weight:500;">Contact</a>
-          </div>
-      </nav>
+        <nav class="main-navbar" id="main-navbar"
+            style="position:fixed;top:-80px;left:0;width:100%;background:var(--bg-secondary);z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-weight:700;font-size:1.3rem;color:#fff;letter-spacing:1px;">Voice of the College</span>
+            <div>
+                <a href="#features"
+                    style="color:#fff;margin-right:2rem;text-decoration:none;font-weight:500;">Features</a>
+                <a href="#join" style="color:#fff;text-decoration:none;font-weight:500;">Join</a>
+                <a href="#contact" style="color:#fff;margin-left:2rem;text-decoration:none;font-weight:500;">Contact</a>
+            </div>
+        </nav>
     </header>
     <main class="hero-section">
         <div class="stars-background"></div>
@@ -34,13 +39,15 @@
                             Voice of the College
                         </h1>
                         <p class="hero-subtitle fade-up">
-                            The revolutionary Platform empowering 40 million Indian students with AI-powered guidance, community connections, digital literacy tools and real-time shuttle tracking.
+                            The revolutionary Platform empowering 40 million Indian students with AI-powered guidance,
+                            community connections, digital literacy tools and real-time shuttle tracking.
                         </p>
                     </header>
                 </div>
                 <div class="hero-illustration">
                     <!-- Decorative SVG Illustration with animation -->
-                    <svg viewBox="0 0 220 220" width="100%" height="100%" aria-hidden="true" style="max-width:340px;display:block;margin:auto;">
+                    <svg viewBox="0 0 220 220" width="100%" height="100%" aria-hidden="true"
+                        style="max-width:340px;display:block;margin:auto;">
                         <defs>
                             <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
                                 <stop offset="0%" stop-color="var(--primary-color)" />
@@ -65,9 +72,55 @@
                         </rect>
                     </svg>
                 </div>
-                
+
             </section>
             <!-- ...existing code... -->
+            <section class="fade-section" id="ui-components"
+                style="margin:3rem auto;max-width:700px;text-align: center;">
+                <h2 style="text-align:center;font-size:2rem;margin-bottom:1.2rem;">Next-Gen Interactive Experience</h2>
+                <p style="text-align:center;color:var(--text-secondary);font-size:1.15rem;margin-bottom:2rem;">
+                    Discover the advanced features that make Voice of the College truly interactive and accessible. Our
+                    platform brings you seamless modals for important alerts, tabbed navigation for organized content,
+                    and a smooth carousel for engaging stories—all crafted for accessibility, speed, and delight.
+                </p>
+                <!-- Collapsible Modal Demo -->
+                <button class="collapsible" id="collapsibleBtn" aria-expanded="false"
+                    aria-controls="collapsibleContent">Features & Alerts</button>
+                <div class="content-collapsible" id="collapsibleContent">
+                    <div style="padding:12px 0;">
+                        <p style="color:var(--text-secondary);margin-bottom:1rem;">Tap to reveal quick actions and
+                            important alerts. You can open a focused modal from here.</p>
+                        <button id="openModalBtn" class="cta-button">Open Modal</button>
+                    </div>
+                </div>
+                <!-- Tabs Demo -->
+                <div id="tabs-demo" style="margin-bottom:2rem;">
+                    <div class="tablist">
+                        <button class="tab" id="tabA">Tab A</button>
+                        <button class="tab" id="tabB">Tab B</button>
+                        <button class="tab" id="tabC">Tab C</button>
+                    </div>
+                    <div class="tabpanel" id="panelA">Content for Tab A</div>
+                    <div class="tabpanel" id="panelB">Content for Tab B</div>
+                    <div class="tabpanel" id="panelC">Content for Tab C</div>
+                </div>
+                <!-- Carousel Demo -->
+                <div id="carousel-demo" tabindex="0" style="position:relative;max-width:400px;margin:auto;">
+                    <div class="slide"
+                        style="background:var(--gradient-1);color:#fff;padding:2rem;text-align:center;border-radius:12px;">
+                        Slide 1</div>
+                    <div class="slide"
+                        style="background:var(--gradient-2);color:#fff;padding:2rem;text-align:center;border-radius:12px;">
+                        Slide 2</div>
+                    <div class="slide"
+                        style="background:var(--gradient-3);color:#fff;padding:2rem;text-align:center;border-radius:12px;">
+                        Slide 3</div>
+                    <button class="carousel-prev" aria-label="Previous slide"
+                        style="position:absolute;left:0;top:50%;transform:translateY(-50%);background:var(--primary-color);color:#fff;border:none;border-radius:50%;width:2.5rem;height:2.5rem;">&#8592;</button>
+                    <button class="carousel-next" aria-label="Next slide"
+                        style="position:absolute;right:0;top:50%;transform:translateY(-50%);background:var(--primary-color);color:#fff;border:none;border-radius:50%;width:2.5rem;height:2.5rem;">&#8594;</button>
+                </div>
+            </section>
             <!-- Section 1: Features -->
             <section class="hero-content fade-section" id="features">
                 <div class="features-grid">
@@ -128,23 +181,34 @@
                         <span class="stat-label">Market Size</span>
                     </div>
                 </div>
-                <section id="contact" class="fade-section" style="max-width:500px;margin:3rem auto 2rem auto;padding:2rem;background:rgba(255,255,255,0.04);border-radius:16px;">
+                <section id="contact" class="fade-section"
+                    style="max-width:500px;margin:3rem auto 2rem auto;padding:2rem;background:rgba(255,255,255,0.04);border-radius:16px;">
                     <h2 style="text-align:center;font-size:2rem;margin-bottom:1.2rem;">Contact Us</h2>
                     <form id="contactForm" aria-labelledby="contact-heading" novalidate>
                         <div style="margin-bottom:1rem;">
                             <label for="name" style="display:block;font-weight:600;margin-bottom:0.3rem;">Name</label>
-                            <input type="text" id="name" name="name" required aria-required="true" aria-label="Your Name" style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;">
-                            <span class="error-message" id="name-error" aria-live="polite" style="color:#f5576c;font-size:0.95rem;"></span>
+                            <input type="text" id="name" name="name" required aria-required="true"
+                                aria-label="Your Name"
+                                style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;">
+                            <span class="error-message" id="name-error" aria-live="polite"
+                                style="color:#f5576c;font-size:0.95rem;"></span>
                         </div>
                         <div style="margin-bottom:1rem;">
                             <label for="email" style="display:block;font-weight:600;margin-bottom:0.3rem;">Email</label>
-                            <input type="email" id="email" name="email" required aria-required="true" aria-label="Your Email" style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;">
-                            <span class="error-message" id="email-error" aria-live="polite" style="color:#f5576c;font-size:0.95rem;"></span>
+                            <input type="email" id="email" name="email" required aria-required="true"
+                                aria-label="Your Email"
+                                style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;">
+                            <span class="error-message" id="email-error" aria-live="polite"
+                                style="color:#f5576c;font-size:0.95rem;"></span>
                         </div>
                         <div style="margin-bottom:1rem;">
-                            <label for="message" style="display:block;font-weight:600;margin-bottom:0.3rem;">Message</label>
-                            <textarea id="message" name="message" required aria-required="true" aria-label="Your Message" rows="4" style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;"></textarea>
-                            <span class="error-message" id="message-error" aria-live="polite" style="color:#f5576c;font-size:0.95rem;"></span>
+                            <label for="message"
+                                style="display:block;font-weight:600;margin-bottom:0.3rem;">Message</label>
+                            <textarea id="message" name="message" required aria-required="true"
+                                aria-label="Your Message" rows="4"
+                                style="width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;"></textarea>
+                            <span class="error-message" id="message-error" aria-live="polite"
+                                style="color:#f5576c;font-size:0.95rem;"></span>
                         </div>
                         <button type="submit" class="cta-button" style="width:100%;">Send Message</button>
                         <div id="form-status" aria-live="polite" style="margin-top:1rem;font-size:1rem;"></div>
@@ -153,117 +217,183 @@
             </footer>
         </div>
         <!-- ...existing code... -->
+        <!-- UI Components Demo Section -->
     </main>
-                <!-- Contact Section at Bottom -->
-                <footer style="text-align:center;padding:1.5rem 0;color:#b3b3b3;font-size:1rem;background:var(--bg-secondary);margin-top:2rem;">
-                    <div>&copy; 2025 Voice of the College. All rights reserved.</div>
-                    <div>Made with ❤️ for Indian Higher Education.</div>
-                </footer>
-        
-        <div class="floating-elements">
-            <div class="floating-element" style="--delay: 0s; --duration: 6s;"></div>
-            <div class="floating-element" style="--delay: 2s; --duration: 8s;"></div>
-            <div class="floating-element" style="--delay: 4s; --duration: 7s;"></div>
-            <div class="floating-element" style="--delay: 1s; --duration: 9s;"></div>
+    <!-- Contact Section at Bottom -->
+    <footer style="text-align:center;padding:1.5rem 0;color:#b3b3b3;font-size:1rem;background:var(--bg-secondary);">
+        <div>&copy; 2025 Voice of the College. All rights reserved.</div>
+        <div>Made with ❤️ for Indian Higher Education.</div>
+        <div style="margin-top:1.2rem;">
+            <strong>Team:</strong> Chetan Srinivas K, Seevathsa O, PV Krishna Yesaswi, Lokesh S
         </div>
+        <div style="margin-top:0.5rem;">
+            <strong>Office:</strong> 2nd Floor, EduHub, MG Road, Bengaluru, India
+        </div>
+    </footer>
+
+    <div class="floating-elements">
+        <div class="floating-element" style="--delay: 0s; --duration: 6s;"></div>
+        <div class="floating-element" style="--delay: 2s; --duration: 8s;"></div>
+        <div class="floating-element" style="--delay: 4s; --duration: 7s;"></div>
+        <div class="floating-element" style="--delay: 1s; --duration: 9s;"></div>
+    </div>
     </main>
-<script>
-// Navbar Slide-In Animation
-window.addEventListener('DOMContentLoaded', function() {
-    gsap.to('#main-navbar', {
-        y: 80,
-        duration: 1.1,
-        ease: 'power4.out',
-        delay: 0.3
-    });
+    <script src="components.js"></script>
+    <script src="tests.js"></script>
+    <script>
+        // Navbar Slide-In Animation
+        window.addEventListener('DOMContentLoaded', function () {
+            gsap.to('#main-navbar', {
+                y: 80,
+                duration: 1.1,
+                ease: 'power4.out',
+                delay: 0.3
+            });
 
-    // Button Hover Pulse (JS-powered, overrides CSS)
-    document.querySelectorAll('button').forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
-            gsap.to(btn, { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: 'power1.inOut' });
+            // Button Hover Pulse (JS-powered, overrides CSS)
+            document.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    gsap.to(btn, {
+                        scale: 1.08,
+                        duration: 0.18,
+                        yoyo: true,
+                        repeat: 1,
+                        ease: 'power1.inOut'
+                    });
+                });
+                btn.addEventListener('mouseleave', () => {
+                    gsap.to(btn, {
+                        scale: 1,
+                        duration: 0.18,
+                        ease: 'power1.inOut'
+                    });
+                });
+            });
+
+            // Scroll-Triggered Fade-Ins for 3 sections
+            gsap.utils.toArray('.fade-section').forEach((section, i) => {
+                gsap.from(section, {
+                    opacity: 0,
+                    y: 60,
+                    duration: 1,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top 80%',
+                        toggleActions: 'play none none none'
+                    },
+                    delay: i * 0.2
+                });
+            });
+
+            // Contact Form Validation & Submission
+            const form = document.getElementById('contactForm');
+            const statusDiv = document.getElementById('form-status');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                let valid = true;
+                // Clear previous errors
+                ['name', 'email', 'message'].forEach(id => {
+                    document.getElementById(id + '-error').textContent = '';
+                });
+                statusDiv.textContent = '';
+
+                // Validate Name
+                const name = form.name.value.trim();
+                if (!name) {
+                    document.getElementById('name-error').textContent = 'Please enter your name.';
+                    valid = false;
+                }
+
+                // Validate Email
+                const email = form.email.value.trim();
+                if (!email) {
+                    document.getElementById('email-error').textContent = 'Please enter your email.';
+                    valid = false;
+                } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                    document.getElementById('email-error').textContent =
+                        'Please enter a valid email address.';
+                    valid = false;
+                }
+
+                // Validate Message
+                const message = form.message.value.trim();
+                if (!message) {
+                    document.getElementById('message-error').textContent = 'Please enter your message.';
+                    valid = false;
+                }
+
+                if (!valid) {
+                    statusDiv.textContent = '';
+                    return;
+                }
+
+                // Mock submit to fake endpoint
+                statusDiv.textContent = 'Sending...';
+                fetch('https://jsonplaceholder.typicode.com/posts', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name,
+                            email,
+                            message
+                        })
+                    })
+                    .then(res => {
+                        if (res.ok) {
+                            statusDiv.textContent = 'Thank you! Your message has been sent.';
+                            form.reset();
+                        } else {
+                            throw new Error('Network error');
+                        }
+                    })
+                    .catch(() => {
+                        statusDiv.textContent =
+                            'Sorry, there was a problem sending your message. Please try again.';
+                    });
+            });
+
+            // UI Components Initialization
+            // Modal
+            const modal = new Modal({
+                ariaLabel: 'Demo Modal'
+            });
+            // Collapsible behavior
+            const coll = document.getElementById('collapsibleBtn');
+            const collContent = document.getElementById('collapsibleContent');
+            coll.addEventListener('click', function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                this.classList.toggle('active');
+                if (collContent.style.maxHeight && !expanded === false) {
+                    collContent.style.maxHeight = null;
+                } else {
+                    collContent.style.maxHeight = collContent.scrollHeight + 'px';
+                }
+            });
+
+            // Modal opener inside collapsible
+            const openModalBtn = document.getElementById('openModalBtn');
+            document.getElementById('openModalBtn').addEventListener('click', (e) => {
+                // open as popover positioned under the trigger button
+                modal.show(
+                    '<div style="min-width:200px"><h3 style="margin:0 0 8px 0;font-size:1.05rem;">Quick Alert</h3><div style="margin-bottom:0.6rem;color:var(--text-secondary);">This modal was opened from the collapsible content.</div><div style="text-align:right;"><button onclick="window.ModalInstance.hide()" class="cta-button" style="padding:0.4rem 0.8rem;font-size:0.95rem;">Close</button></div></div>',
+                    { positionTarget: openModalBtn }
+                );
+                window.ModalInstance = modal;
+            });
+            // Tabs
+            new Tabs({
+                container: '#tabs-demo'
+            });
+            // Carousel
+            new Carousel({
+                container: '#carousel-demo'
+            });
         });
-        btn.addEventListener('mouseleave', () => {
-            gsap.to(btn, { scale: 1, duration: 0.18, ease: 'power1.inOut' });
-        });
-    });
-
-    // Scroll-Triggered Fade-Ins for 3 sections
-    gsap.utils.toArray('.fade-section').forEach((section, i) => {
-        gsap.from(section, {
-            opacity: 0,
-            y: 60,
-            duration: 1,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: section,
-                start: 'top 80%',
-                toggleActions: 'play none none none'
-            },
-            delay: i * 0.2
-        });
-    });
-
-    // Contact Form Validation & Submission
-    const form = document.getElementById('contactForm');
-    const statusDiv = document.getElementById('form-status');
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        let valid = true;
-        // Clear previous errors
-        ['name', 'email', 'message'].forEach(id => {
-            document.getElementById(id+'-error').textContent = '';
-        });
-        statusDiv.textContent = '';
-
-        // Validate Name
-        const name = form.name.value.trim();
-        if (!name) {
-            document.getElementById('name-error').textContent = 'Please enter your name.';
-            valid = false;
-        }
-
-        // Validate Email
-        const email = form.email.value.trim();
-        if (!email) {
-            document.getElementById('email-error').textContent = 'Please enter your email.';
-            valid = false;
-        } else if (!/^\S+@\S+\.\S+$/.test(email)) {
-            document.getElementById('email-error').textContent = 'Please enter a valid email address.';
-            valid = false;
-        }
-
-        // Validate Message
-        const message = form.message.value.trim();
-        if (!message) {
-            document.getElementById('message-error').textContent = 'Please enter your message.';
-            valid = false;
-        }
-
-        if (!valid) {
-            statusDiv.textContent = '';
-            return;
-        }
-
-        // Mock submit to fake endpoint
-        statusDiv.textContent = 'Sending...';
-        fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, message })
-        })
-        .then(res => {
-            if (res.ok) {
-                statusDiv.textContent = 'Thank you! Your message has been sent.';
-                form.reset();
-            } else {
-                throw new Error('Network error');
-            }
-        })
-        .catch(() => {
-            statusDiv.textContent = 'Sorry, there was a problem sending your message. Please try again.';
-        });
-    });
-});
-</script>
+    </script>
 </body>
+
 </html>
